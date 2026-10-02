@@ -1,0 +1,4477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="SBA Contact Solutions — professional customer service, contact centre and business support solutions.">
+
+<title>SBA Contact Solutions | Professional Customer Support</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   GLOBAL STYLES
+========================================================= */
+
+:root {
+    --navy: #07182d;
+    --navy2: #0d2b4f;
+    --blue: #1769c2;
+    --blue2: #4d91e8;
+    --gold: #d9b949;
+    --gold2: #f2d56d;
+    --ink: #152238;
+    --muted: #667085;
+    --line: #e5eaf0;
+    --off: #f6f8fb;
+    --white: #ffffff;
+
+    --shadow:
+        0 22px 65px rgba(7, 24, 45, 0.11);
+
+    --container: 1160px;
+    --radius: 22px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.6;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(
+        var(--container),
+        calc(100% - 40px)
+    );
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   TOP ANNOUNCEMENT BAR
+========================================================= */
+
+.announcement {
+    background: #051327;
+    color: #aebed2;
+    font-size: 12px;
+}
+
+.announcement-inner {
+    min-height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.status-dot {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    background: #52d59b;
+
+    border-radius: 50%;
+
+    margin-right: 7px;
+}
+
+
+/* =========================================================
+   HEADER / NAVIGATION
+========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+
+    z-index: 50;
+
+    background: rgba(255,255,255,.94);
+
+    backdrop-filter: blur(16px);
+
+    border-bottom:
+        1px solid rgba(229,234,240,.8);
+
+    transition: .25s;
+}
+
+.site-header.scrolled {
+    box-shadow:
+        0 8px 30px rgba(7,24,45,.07);
+}
+
+.nav-wrap {
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-family: Manrope, sans-serif;
+
+    font-weight: 800;
+
+    font-size: 17px;
+}
+
+.brand b {
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    letter-spacing: .02em;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy2),
+            var(--blue)
+        );
+
+    color: #fff;
+
+    display: grid;
+    place-items: center;
+
+    font-family: Manrope;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 18px rgba(23,105,194,.22);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #465469;
+}
+
+.nav > a:not(.btn) {
+    position: relative;
+
+    padding: 29px 0;
+}
+
+.nav > a:not(.btn)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 20px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--blue);
+
+    transition: .2s;
+}
+
+.nav > a:not(.btn):hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    border: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 20px;
+
+    border-radius: 11px;
+
+    font-weight: 800;
+
+    font-size: 13px;
+
+    transition: .2s;
+
+    white-space: nowrap;
+}
+
+.btn span {
+    font-size: 17px;
+    line-height: 0;
+}
+
+.btn-gold {
+    background: var(--gold2);
+
+    color: #14233a;
+
+    box-shadow:
+        0 9px 24px rgba(217,185,73,.2);
+}
+
+.btn-gold:hover {
+    transform: translateY(-2px);
+
+    background: #f7dc79;
+}
+
+.btn-blue {
+    background: var(--blue);
+
+    color: #fff;
+
+    box-shadow:
+        0 10px 25px rgba(23,105,194,.18);
+}
+
+.btn-blue:hover {
+    transform: translateY(-2px);
+
+    background: #125da9;
+}
+
+.btn-outline-light {
+    border:
+        1px solid rgba(255,255,255,.3);
+
+    color: #fff;
+}
+
+.btn-outline-light:hover {
+    background: #fff;
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+
+    border: 0;
+
+    width: 44px;
+    height: 44px;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 23px;
+    height: 2px;
+
+    background: var(--navy);
+
+    margin: 5px auto;
+
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 80% 15%,
+            rgba(54,117,188,.25),
+            transparent 31%
+        ),
+        linear-gradient(
+            125deg,
+            #06172c,
+            #0b2b4d 65%,
+            #09213b
+        );
+
+    color: #fff;
+
+    overflow: hidden;
+}
+
+.hero-grid {
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr .95fr;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding:
+        70px 0
+        88px;
+}
+
+.eyebrow {
+    font-size: 11px;
+
+    letter-spacing: .13em;
+
+    font-weight: 800;
+
+    color: #d5e2f1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.eyebrow-line {
+    width: 25px;
+    height: 2px;
+
+    background: var(--gold2);
+}
+
+.hero h1 {
+    font-family: Manrope, sans-serif;
+
+    font-size:
+        clamp(
+            44px,
+            5.4vw,
+            72px
+        );
+
+    line-height: 1.05;
+
+    letter-spacing: -.055em;
+
+    max-width: 720px;
+
+    margin: 18px 0 24px;
+}
+
+.hero h1 em {
+    font-style: normal;
+
+    color: var(--gold2);
+}
+
+.hero-lead {
+    font-size: 17px;
+
+    line-height: 1.75;
+
+    color: #c7d4e5;
+
+    max-width: 650px;
+}
+
+.hero-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 31px;
+}
+
+.hero-proof {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 37px;
+
+    color: #d5e1ee;
+}
+
+.hero-proof small {
+    display: block;
+
+    color: #91a5bb;
+
+    font-size: 11px;
+
+    margin-top: 2px;
+}
+
+.avatars {
+    display: flex;
+}
+
+.avatars span {
+    width: 30px;
+    height: 30px;
+
+    border:
+        2px solid #0a2745;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background: #1a4d7f;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    margin-left: -7px;
+}
+
+.avatars span:first-child {
+    margin-left: 0;
+}
+
+.avatars span:last-child {
+    background: var(--gold);
+
+    color: #1a2940;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+    min-height: 470px;
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+}
+
+.orb {
+    position: absolute;
+
+    border:
+        1px solid rgba(255,255,255,.13);
+
+    border-radius: 50%;
+}
+
+.orb-one {
+    width: 430px;
+    height: 430px;
+}
+
+.orb-two {
+    width: 530px;
+    height: 530px;
+
+    border-color:
+        rgba(217,185,73,.17);
+}
+
+.support-card {
+    width: min(390px,78%);
+
+    padding: 25px;
+
+    background: #fff;
+
+    border-radius: 23px;
+
+    color: var(--ink);
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.28);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.support-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: Manrope;
+
+    font-weight: 800;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+.online {
+    font-family: "DM Sans";
+
+    font-size: 10px;
+
+    color: #16a56e;
+}
+
+.online i {
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    background: #1fc27f;
+
+    border-radius: 50%;
+
+    margin-right: 4px;
+}
+
+.agent-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    background: #f5f7fa;
+
+    border-radius: 15px;
+}
+
+.agent-avatar {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--blue2),
+            var(--blue)
+        );
+
+    color: #fff;
+
+    font-weight: 800;
+}
+
+.agent-card small {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.verified {
+    margin-left: auto;
+
+    width: 23px;
+    height: 23px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background: #e8f8f0;
+
+    color: #16a56e;
+
+    font-weight: 800;
+
+    font-size: 11px;
+}
+
+.support-card > p {
+    font-size: 12px;
+
+    color: var(--muted);
+
+    margin: 16px 0;
+}
+
+
+/* =========================================================
+   WAVE ANIMATION
+========================================================= */
+
+.wave {
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    border-top:
+        1px solid #edf0f4;
+
+    border-bottom:
+        1px solid #edf0f4;
+}
+
+.wave i {
+    width: 4px;
+
+    border-radius: 5px;
+
+    background: var(--gold);
+
+    animation:
+        wave 1.2s
+        infinite
+        ease-in-out;
+}
+
+.wave i:nth-child(1) {
+    height: 18px;
+}
+
+.wave i:nth-child(2) {
+    height: 35px;
+}
+
+.wave i:nth-child(3) {
+    height: 52px;
+}
+
+.wave i:nth-child(4) {
+    height: 28px;
+}
+
+.wave i:nth-child(5) {
+    height: 44px;
+}
+
+.wave i:nth-child(6) {
+    height: 24px;
+}
+
+.wave i:nth-child(7) {
+    height: 50px;
+}
+
+.wave i:nth-child(8) {
+    height: 31px;
+}
+
+.wave i:nth-child(9) {
+    height: 42px;
+}
+
+.wave i:nth-child(10) {
+    height: 21px;
+}
+
+.wave i:nth-child(11) {
+    height: 35px;
+}
+
+.wave i:nth-child(12) {
+    height: 18px;
+}
+
+@keyframes wave {
+    50% {
+        transform: scaleY(.55);
+        opacity: .6;
+    }
+}
+
+.chat-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 11px;
+
+    color: var(--muted);
+
+    padding-top: 15px;
+}
+
+.chat-row b {
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   FLOATING HERO CARDS
+========================================================= */
+
+.floating-card {
+    position: absolute;
+
+    z-index: 3;
+
+    background: #fff;
+
+    color: var(--ink);
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    padding: 12px 15px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.18);
+
+    font-size: 11px;
+}
+
+.floating-card small {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+.float-icon {
+    width: 31px;
+    height: 31px;
+
+    border-radius: 9px;
+
+    display: grid;
+    place-items: center;
+
+    background: #edf4ff;
+
+    color: var(--blue);
+
+    font-weight: 900;
+}
+
+.floating-card-one {
+    top: 16%;
+    right: 0;
+}
+
+.floating-card-two {
+    bottom: 13%;
+    left: 0;
+}
+
+
+/* =========================================================
+   TRUST STRIP
+========================================================= */
+
+.trust-strip {
+    position: relative;
+
+    z-index: 5;
+
+    margin-top: -30px;
+}
+
+.trust-grid {
+    background: #fff;
+
+    box-shadow:
+        0 14px 45px rgba(7,24,45,.1);
+
+    border-radius: 18px;
+
+    padding: 26px 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+}
+
+.trust-grid > div {
+    padding: 2px 23px;
+
+    border-right:
+        1px solid var(--line);
+}
+
+.trust-grid > div:last-child {
+    border: 0;
+}
+
+.trust-grid strong {
+    display: block;
+
+    font-family: Manrope;
+
+    color: var(--navy);
+
+    font-size: 16px;
+}
+
+.trust-grid span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.section {
+    padding: 105px 0;
+}
+
+.services-section {
+    background: var(--off);
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 740px;
+
+    margin:
+        0 auto
+        50px;
+}
+
+.kicker {
+    display: block;
+
+    color: var(--blue);
+
+    font-weight: 800;
+
+    font-size: 11px;
+
+    letter-spacing: .14em;
+
+    margin-bottom: 11px;
+}
+
+.section-heading h2,
+.about-copy h2,
+.contact-copy h2 {
+    font-family: Manrope;
+
+    font-size:
+        clamp(
+            32px,
+            4vw,
+            48px
+        );
+
+    line-height: 1.1;
+
+    letter-spacing: -.04em;
+
+    color: var(--navy);
+}
+
+.section-heading p,
+.contact-copy > p {
+    color: var(--muted);
+
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 19px;
+}
+
+.service-card {
+    position: relative;
+
+    text-align: left;
+
+    background: #fff;
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 19px;
+
+    padding: 27px;
+
+    min-height: 245px;
+
+    box-shadow:
+        0 5px 20px rgba(7,24,45,.025);
+
+    transition: .25s;
+
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #cbd9e8;
+
+    box-shadow: var(--shadow);
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 14px;
+
+    background: #edf4ff;
+
+    color: var(--blue);
+
+    display: grid;
+    place-items: center;
+
+    font-size: 20px;
+
+    margin-bottom: 21px;
+}
+
+.service-number {
+    position: absolute;
+
+    top: 24px;
+    right: 25px;
+
+    color: #b8c2ce;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+.service-card h3 {
+    font-family: Manrope;
+
+    font-size: 19px;
+
+    color: var(--navy);
+
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    font-size: 13px;
+
+    color: var(--muted);
+
+    max-width: 310px;
+}
+
+.learn {
+    position: absolute;
+
+    bottom: 25px;
+
+    color: var(--blue);
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+.learn b {
+    margin-left: 6px;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-visual {
+    min-height: 500px;
+
+    border-radius: 29px;
+
+    padding: 38px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(77,145,232,.3),
+            transparent 25%
+        ),
+        linear-gradient(
+            145deg,
+            #081b33,
+            #0d3a68
+        );
+
+    color: #fff;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.about-visual::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border:
+        55px solid
+        rgba(217,185,73,.09);
+
+    border-radius: 50%;
+
+    right: -110px;
+    top: -110px;
+}
+
+.visual-label {
+    font-size: 10px;
+
+    letter-spacing: .14em;
+
+    color: #9fb4cb;
+
+    font-weight: 800;
+}
+
+.about-visual > h3 {
+    font-family: Manrope;
+
+    font-size: 34px;
+
+    line-height: 1.15;
+
+    max-width: 350px;
+
+    margin-top: 17px;
+}
+
+.mini-dashboard {
+    position: absolute;
+
+    left: 38px;
+    right: 38px;
+    bottom: 38px;
+
+    background: #fff;
+
+    color: var(--ink);
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 22px 45px rgba(0,0,0,.18);
+}
+
+.dashboard-head {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 11px;
+}
+
+.dashboard-head strong {
+    color: #159467;
+}
+
+.dashboard-head.second {
+    margin-top: 18px;
+}
+
+.progress {
+    height: 7px;
+
+    background: #e9edf2;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-top: 8px;
+}
+
+.progress i {
+    display: block;
+
+    height: 100%;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--blue),
+            var(--gold)
+        );
+}
+
+.dashboard-stats {
+    border-top:
+        1px solid var(--line);
+
+    margin-top: 20px;
+
+    padding-top: 14px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.dashboard-stats b {
+    color: var(--navy);
+}
+
+.about-copy h2 {
+    text-align: left;
+}
+
+.about-copy > p {
+    color: var(--muted);
+
+    margin:
+        19px 0
+        24px;
+}
+
+.check-list {
+    display: grid;
+
+    gap: 13px;
+
+    margin-bottom: 28px;
+}
+
+.check-list div {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: flex-start;
+}
+
+.check-list span {
+    color: var(--gold);
+
+    font-size: 18px;
+
+    font-weight: 900;
+}
+
+.check-list p {
+    font-size: 13px;
+
+    color: var(--muted);
+}
+
+.check-list b {
+    color: var(--ink);
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process-section {
+    background: var(--off);
+}
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 17px;
+}
+
+.process-card {
+    background: #fff;
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    min-height: 205px;
+}
+
+.process-card > span {
+    font-family: Manrope;
+
+    font-size: 32px;
+
+    color: var(--gold);
+}
+
+.process-card h3 {
+    font-family: Manrope;
+
+    color: var(--navy);
+
+    margin:
+        10px 0
+        7px;
+
+    font-size: 18px;
+}
+
+.process-card p {
+    font-size: 13px;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   INDUSTRIES
+========================================================= */
+
+.industry-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    max-width: 920px;
+
+    margin: auto;
+}
+
+.industry-list span {
+    padding: 11px 16px;
+
+    border:
+        1px solid var(--line);
+
+    background: #fff;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #465469;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta-section {
+    padding:
+        0 0
+        105px;
+}
+
+.cta-box {
+    background:
+        linear-gradient(
+            120deg,
+            #071a31,
+            #0c3e71
+        );
+
+    color: #fff;
+
+    border-radius: 28px;
+
+    padding:
+        58px 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.cta-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 310px;
+    height: 310px;
+
+    border:
+        65px solid
+        rgba(217,185,73,.09);
+
+    border-radius: 50%;
+
+    right: -100px;
+    top: -110px;
+}
+
+.cta-box > div {
+    position: relative;
+
+    z-index: 1;
+}
+
+.cta-box h2 {
+    font-family: Manrope;
+
+    font-size:
+        clamp(
+            30px,
+            3.5vw,
+            44px
+        );
+
+    line-height: 1.1;
+
+    letter-spacing: -.035em;
+
+    max-width: 650px;
+}
+
+.cta-box p {
+    color: #bfcfe0;
+
+    margin-top: 12px;
+
+    max-width: 600px;
+}
+
+.gold-kicker {
+    color: var(--gold2);
+}
+
+.cta-box > .btn {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    background: var(--off);
+}
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap: 65px;
+
+    align-items: start;
+}
+
+.contact-copy h2 {
+    text-align: left;
+}
+
+.contact-details {
+    display: grid;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.contact-details > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+.contact-details > div > span {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px;
+
+    background: #fff;
+
+    color: var(--blue);
+
+    display: grid;
+    place-items: center;
+
+    font-weight: 800;
+}
+
+.contact-details b {
+    font-size: 12px;
+}
+
+.contact-details small {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-top: 1px;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form {
+    background: #fff;
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    box-shadow: var(--shadow);
+
+    display: grid;
+
+    gap: 16px;
+}
+
+.form-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    border-bottom:
+        1px solid var(--line);
+
+    padding-bottom: 18px;
+
+    margin-bottom: 3px;
+}
+
+.form-title .kicker {
+    margin: 0;
+}
+
+.form-title h3 {
+    font-family: Manrope;
+
+    font-size: 23px;
+
+    color: var(--navy);
+
+    margin-top: 3px;
+}
+
+.secure {
+    font-size: 10px;
+
+    color: #159467;
+
+    font-weight: 800;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+}
+
+label {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #465469;
+}
+
+input,
+select,
+textarea {
+    display: block;
+
+    width: 100%;
+
+    border:
+        1px solid #dce3eb;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    padding: 12px 13px;
+
+    margin-top: 7px;
+
+    outline: 0;
+
+    color: var(--ink);
+
+    transition: .2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(23,105,194,.09);
+}
+
+textarea {
+    min-height: 125px;
+
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+.form-message {
+    text-align: center;
+
+    font-size: 11px;
+
+    color: #159467;
+
+    min-height: 16px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    background: #061629;
+
+    color: #9dafc4;
+
+    padding:
+        58px 0
+        22px;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr 1fr;
+
+    gap: 35px;
+}
+
+.footer-brand p {
+    max-width: 330px;
+
+    font-size: 12px;
+
+    margin-top: 15px;
+}
+
+.footer-brand-link {
+    color: #fff;
+}
+
+.footer h4 {
+    color: #fff;
+
+    font-size: 12px;
+
+    margin-bottom: 13px;
+}
+
+.footer a:not(.brand) {
+    display: block;
+
+    font-size: 11px;
+
+    margin: 8px 0;
+}
+
+.footer a:hover {
+    color: var(--gold2);
+}
+
+.copyright {
+    border-top:
+        1px solid rgba(255,255,255,.1);
+
+    margin-top: 42px;
+
+    padding-top: 19px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   SERVICE MODAL
+========================================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-backdrop {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(3,13,26,.72);
+
+    backdrop-filter: blur(5px);
+}
+
+.modal-dialog {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(
+        650px,
+        100%
+    );
+
+    max-height: 90vh;
+
+    overflow: auto;
+
+    background: #fff;
+
+    border-radius: 24px;
+
+    padding: 34px;
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.3);
+
+    animation:
+        modalIn .2s ease;
+}
+
+.modal-close {
+    position: absolute;
+
+    right: 17px;
+    top: 15px;
+
+    border: 0;
+
+    background: #f1f4f7;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    font-size: 23px;
+
+    color: #526176;
+}
+
+.modal-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 15px;
+
+    background: #edf4ff;
+
+    color: var(--blue);
+
+    display: grid;
+    place-items: center;
+
+    font-size: 21px;
+
+    margin-bottom: 19px;
+}
+
+.modal-dialog h2 {
+    font-family: Manrope;
+
+    color: var(--navy);
+
+    font-size: 35px;
+
+    line-height: 1.1;
+}
+
+.modal-dialog > p {
+    color: var(--muted);
+
+    margin:
+        12px 0
+        24px;
+}
+
+.modal-columns {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 25px;
+
+    border-top:
+        1px solid var(--line);
+
+    border-bottom:
+        1px solid var(--line);
+
+    padding:
+        22px 0;
+
+    margin-bottom: 24px;
+}
+
+.modal-columns h4 {
+    font-size: 12px;
+
+    color: var(--navy);
+
+    margin-bottom: 9px;
+}
+
+.modal-columns p,
+.modal-columns li {
+    font-size: 12px;
+
+    color: var(--muted);
+}
+
+.modal-columns ul {
+    padding-left: 17px;
+}
+
+.modal-columns li {
+    margin: 6px 0;
+}
+
+@keyframes modalIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   SCROLL ANIMATIONS
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(18px);
+
+    transition:
+        opacity .65s ease,
+        transform .65s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-top {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 40;
+
+    width: 43px;
+    height: 43px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: var(--navy);
+
+    color: #fff;
+
+    box-shadow:
+        0 10px 25px rgba(7,24,45,.2);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: .2s;
+}
+
+.back-top.show {
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:950px) {
+
+    .nav {
+        gap: 18px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        padding-top: 58px;
+    }
+
+    .hero-copy {
+        text-align: center;
+    }
+
+    .hero .eyebrow,
+    .hero-actions,
+    .hero-proof {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-lead {
+        margin: auto;
+    }
+
+    .hero-visual {
+        min-height: 430px;
+    }
+
+    .service-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .process-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1.5fr 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+@media(max-width:760px) {
+
+    .announcement-inner span:last-child {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+
+        position: absolute;
+
+        top: 78px;
+
+        left: 0;
+        right: 0;
+
+        background: #fff;
+
+        border-bottom:
+            1px solid var(--line);
+
+        box-shadow:
+            0 15px 30px rgba(7,24,45,.1);
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .nav > a:not(.btn) {
+        padding: 13px 0;
+    }
+
+    .nav > a:not(.btn)::after {
+        bottom: 7px;
+    }
+
+    .nav-cta {
+        margin-top: 7px;
+    }
+
+    .trust-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .trust-grid > div {
+        border-bottom:
+            1px solid var(--line);
+
+        padding: 14px 10px;
+    }
+
+    .trust-grid > div:nth-child(2) {
+        border-right: 0;
+    }
+
+    .trust-grid > div:nth-last-child(-n+2) {
+        border-bottom: 0;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .cta-section {
+        padding-bottom: 80px;
+    }
+
+    .cta-box {
+        display: block;
+
+        padding:
+            40px 30px;
+    }
+
+    .cta-box .btn {
+        margin-top: 24px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:560px) {
+
+    .container {
+        width:
+            min(
+                var(--container),
+                calc(100% - 28px)
+            );
+    }
+
+    .brand-text {
+        font-size: 15px;
+    }
+
+    .hero-grid {
+        padding:
+            55px 0
+            70px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-lead {
+        font-size: 15px;
+    }
+
+    .hero-visual {
+        min-height: 380px;
+    }
+
+    .orb-one {
+        width: 300px;
+        height: 300px;
+    }
+
+    .orb-two {
+        width: 360px;
+        height: 360px;
+    }
+
+    .support-card {
+        width: 78%;
+
+        padding: 20px;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-grid > div {
+        border-right: 0 !important;
+
+        border-bottom:
+            1px solid var(--line) !important;
+    }
+
+    .trust-grid > div:last-child {
+        border-bottom: 0 !important;
+    }
+
+    .service-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 225px;
+    }
+
+    .about-visual {
+        min-height: 420px;
+
+        padding: 27px;
+    }
+
+    .about-visual > h3 {
+        font-size: 28px;
+    }
+
+    .mini-dashboard {
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+    }
+
+    .dashboard-stats {
+        display: block;
+    }
+
+    .dashboard-stats span {
+        display: block;
+
+        margin-top: 5px;
+    }
+
+    .cta-box h2 {
+        font-size: 30px;
+    }
+
+    .contact-form {
+        padding: 21px;
+    }
+
+    .form-title {
+        display: block;
+    }
+
+    .secure {
+        display: block;
+
+        margin-top: 8px;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .copyright {
+        display: block;
+    }
+
+    .copyright span {
+        display: block;
+
+        margin-top: 7px;
+    }
+
+    .modal-dialog {
+        padding: 26px 22px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     ANNOUNCEMENT
+====================================================== -->
+
+<div class="announcement">
+
+    <div class="container announcement-inner">
+
+        <span>
+            <span class="status-dot"></span>
+            Professional customer care, built around your brand.
+        </span>
+
+        <span>
+            Flexible support coverage • Reliable communication
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header class="site-header" id="siteHeader">
+
+    <div class="container nav-wrap">
+
+        <a
+            class="brand"
+            href="#home"
+            aria-label="SBA Contact Solutions home"
+        >
+
+            <span class="brand-mark">
+                S
+            </span>
+
+            <span class="brand-text">
+
+                SBA
+
+                <b>
+                    Contact Solutions
+                </b>
+
+            </span>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <nav
+            class="nav"
+            id="mainNav"
+        >
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#process">
+                How It Works
+            </a>
+
+            <a href="#industries">
+                Industries
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a
+                href="#contact"
+                class="btn btn-gold nav-cta"
+            >
+                Get a Consultation
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main id="home">
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+    <div class="hero-grid container">
+
+
+        <div class="hero-copy reveal">
+
+            <div class="eyebrow">
+
+                <span class="eyebrow-line"></span>
+
+                CUSTOMER EXPERIENCE • CONTACT CENTRE
+
+            </div>
+
+
+            <h1>
+
+                Every conversation is an opportunity to
+
+                <em>
+                    build trust.
+                </em>
+
+            </h1>
+
+
+            <p class="hero-lead">
+
+                SBA Contact Solutions helps businesses
+                deliver responsive, professional customer
+                service across phone, chat, email and other
+                customer touchpoints.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a
+                    class="btn btn-gold"
+                    href="#contact"
+                >
+
+                    Talk to Our Team
+
+                    <span>→</span>
+
+                </a>
+
+
+                <a
+                    class="btn btn-outline-light"
+                    href="#services"
+                >
+
+                    Explore Services
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-proof">
+
+                <div class="avatars">
+
+                    <span>
+                        SB
+                    </span>
+
+                    <span>
+                        CS
+                    </span>
+
+                    <span>
+                        +
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Customer-first support
+                    </strong>
+
+                    <small>
+                        Built to represent your business professionally
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-visual reveal">
+
+
+            <div class="orb orb-one"></div>
+
+            <div class="orb orb-two"></div>
+
+
+            <div class="support-card">
+
+                <div class="support-top">
+
+                    <span>
+                        Live Support
+                    </span>
+
+                    <span class="online">
+
+                        <i></i>
+
+                        ONLINE
+
+                    </span>
+
+                </div>
+
+
+                <div class="agent-card">
+
+                    <div class="agent-avatar">
+                        S
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            SBA Support
+                        </strong>
+
+                        <small>
+                            Customer Care Specialist
+                        </small>
+
+                    </div>
+
+
+                    <span class="verified">
+                        ✓
+                    </span>
+
+                </div>
+
+
+                <p>
+
+                    Connecting you with a real person
+                    who is ready to help.
+
+                </p>
+
+
+                <div class="wave">
+
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+
+                </div>
+
+
+                <div class="chat-row">
+
+                    <span>
+                        Average response
+                    </span>
+
+                    <b>
+                        Fast & friendly
+                    </b>
+
+                </div>
+
+            </div>
+
+
+            <div class="floating-card floating-card-one">
+
+                <span class="float-icon">
+                    ✓
+                </span>
+
+                <div>
+
+                    <b>
+                        Professional
+                    </b>
+
+                    <small>
+                        Brand-aligned support
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="floating-card floating-card-two">
+
+                <span class="float-icon">
+                    ↗
+                </span>
+
+                <div>
+
+                    <b>
+                        Multi-channel
+                    </b>
+
+                    <small>
+                        Phone • Chat • Email
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     TRUST STRIP
+====================================================== -->
+
+<section class="trust-strip">
+
+    <div class="container trust-grid">
+
+        <div>
+
+            <strong>
+                Human-first
+            </strong>
+
+            <span>
+                Support that feels personal
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Multi-channel
+            </strong>
+
+            <span>
+                Phone, chat & digital support
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Flexible
+            </strong>
+
+            <span>
+                Built around your operations
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                Professional
+            </strong>
+
+            <span>
+                Your brand, represented well
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     SERVICES
+====================================================== -->
+
+<section
+    id="services"
+    class="section services-section"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <span class="kicker">
+                WHAT WE DO
+            </span>
+
+            <h2>
+                Customer service that works as an
+                extension of your business.
+            </h2>
+
+            <p>
+                Click any service to see how SBA Contact
+                Solutions can support your customer journey.
+            </p>
+
+        </div>
+
+
+
+        <div class="service-grid">
+
+
+            <button
+                class="service-card reveal"
+                data-service="inbound"
+            >
+
+                <span class="service-icon">
+                    ☎
+                </span>
+
+                <span class="service-number">
+                    01
+                </span>
+
+                <h3>
+                    Inbound Call Support
+                </h3>
+
+                <p>
+                    Professional call handling,
+                    enquiries, message taking and
+                    escalation support.
+                </p>
+
+                <span class="learn">
+                    View service
+                    <b>→</b>
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="service-card reveal"
+                data-service="outbound"
+            >
+
+                <span class="service-icon">
+                    ↗
+                </span>
+
+                <span class="service-number">
+                    02
+                </span>
+
+                <h3>
+                    Outbound Support
+                </h3>
+
+                <p>
+                    Customer follow-ups, reminders,
+                    surveys, appointment calls and campaigns.
+                </p>
+
+                <span class="learn">
+                    View service
+                    <b>→</b>
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="service-card reveal"
+                data-service="chat"
+            >
+
+                <span class="service-icon">
+                    ◌
+                </span>
+
+                <span class="service-number">
+                    03
+                </span>
+
+                <h3>
+                    Live Chat
+                </h3>
+
+                <p>
+                    Fast, friendly digital support for
+                    customers while they browse your website.
+                </p>
+
+                <span class="learn">
+                    View service
+                    <b>→</b>
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="service-card reveal"
+                data-service="email"
+            >
+
+                <span class="service-icon">
+                    ✉
+                </span>
+
+                <span class="service-number">
+                    04
+                </span>
+
+                <h3>
+                    Email Response
+                </h3>
+
+                <p>
+                    Organized handling of customer messages
+                    so requests keep moving.
+                </p>
+
+                <span class="learn">
+                    View service
+                    <b>→</b>
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="service-card reveal"
+                data-service="appointments"
+            >
+
+                <span class="service-icon">
+                    ▣
+                </span>
+
+                <span class="service-number">
+                    05
+                </span>
+
+                <h3>
+                    Appointment Setting
+                </h3>
+
+                <p>
+                    Make booking, confirming and managing
+                    appointments easier for customers.
+                </p>
+
+                <span class="learn">
+                    View service
+                    <b>→</b>
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="service-card reveal"
+                data-service="experience"
+            >
+
+                <span class="service-icon">
+                    ★
+                </span>
+
+                <span class="service-number">
+                    06
+                </span>
+
+                <h3>
+                    Customer Experience
+                </h3>
+
+                <p>
+                    Consistent service standards and
+                    brand-aligned customer interactions.
+                </p>
+
+                <span class="learn">
+                    View service
+                    <b>→</b>
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     ABOUT
+====================================================== -->
+
+<section
+    id="about"
+    class="section about-section"
+>
+
+    <div class="container about-grid">
+
+
+        <div class="about-visual reveal">
+
+            <div class="visual-label">
+                SBA CONTACT SOLUTIONS
+            </div>
+
+            <h3>
+                Your customers deserve to be heard.
+            </h3>
+
+
+            <div class="mini-dashboard">
+
+                <div class="dashboard-head">
+
+                    <span>
+                        Support quality
+                    </span>
+
+                    <strong>
+                        Excellent
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <i style="width:88%"></i>
+
+                </div>
+
+
+                <div class="dashboard-head second">
+
+                    <span>
+                        Response readiness
+                    </span>
+
+                    <strong>
+                        Ready
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <i style="width:94%"></i>
+
+                </div>
+
+
+                <div class="dashboard-stats">
+
+                    <span>
+                        <b>6</b>
+                        core services
+                    </span>
+
+                    <span>
+                        <b>24/7</b>
+                        flexible coverage
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="about-copy reveal">
+
+            <span class="kicker">
+                WHY SBA
+            </span>
+
+            <h2>
+                More than answering calls.
+                We protect the customer experience.
+            </h2>
+
+            <p>
+                Great support is not only about speed.
+                It is about listening carefully,
+                communicating clearly and representing
+                a business with professionalism.
+                Our service model is designed to fit
+                the way your company already works.
+            </p>
+
+
+            <div class="check-list">
+
+                <div>
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <p>
+                        <b>
+                            Brand-aligned communication
+                        </b>
+                        and service procedures.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <p>
+                        <b>
+                            Flexible support
+                        </b>
+                        for growing teams and busy periods.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <p>
+                        <b>
+                            Clear escalation
+                        </b>
+                        and message-handling processes.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <p>
+                        <b>
+                            Professional support
+                        </b>
+                        across multiple customer channels.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="#contact"
+                class="btn btn-blue"
+            >
+
+                Build Your Support Plan
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     PROCESS
+====================================================== -->
+
+<section
+    id="process"
+    class="section process-section"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <span class="kicker">
+                SIMPLE PROCESS
+            </span>
+
+            <h2>
+                From first conversation to dependable support.
+            </h2>
+
+            <p>
+                We make onboarding straightforward so your
+                customer service can become an extension
+                of your business.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card reveal">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Understand
+                </h3>
+
+                <p>
+                    We learn your business, customers,
+                    service standards and support goals.
+                </p>
+
+            </div>
+
+
+            <div class="process-card reveal">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Design
+                </h3>
+
+                <p>
+                    We shape scripts, workflows,
+                    escalation paths and channels
+                    around your needs.
+                </p>
+
+            </div>
+
+
+            <div class="process-card reveal">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Launch
+                </h3>
+
+                <p>
+                    Your support operation goes live
+                    with clear procedures and
+                    communication standards.
+                </p>
+
+            </div>
+
+
+            <div class="process-card reveal">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Improve
+                </h3>
+
+                <p>
+                    We review customer interactions
+                    and refine the service as your
+                    business evolves.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     INDUSTRIES
+====================================================== -->
+
+<section
+    id="industries"
+    class="section industries-section"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <span class="kicker">
+                BUILT FOR BUSINESS
+            </span>
+
+            <h2>
+                Support across the customer journey.
+            </h2>
+
+            <p>
+                Our contact solutions can be adapted
+                to different customer-facing environments.
+            </p>
+
+        </div>
+
+
+        <div class="industry-list reveal">
+
+            <span>
+                Retail & E-commerce
+            </span>
+
+            <span>
+                Professional Services
+            </span>
+
+            <span>
+                Healthcare
+            </span>
+
+            <span>
+                Hospitality
+            </span>
+
+            <span>
+                Technology
+            </span>
+
+            <span>
+                Financial Services
+            </span>
+
+            <span>
+                Telecoms
+            </span>
+
+            <span>
+                Startups & SMEs
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     CTA
+====================================================== -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-box reveal">
+
+
+            <div>
+
+                <span class="kicker gold-kicker">
+                    READY TO IMPROVE YOUR CUSTOMER CARE?
+                </span>
+
+                <h2>
+                    Let's build a support experience
+                    your customers remember.
+                </h2>
+
+                <p>
+                    Tell us what your customers need
+                    and we’ll help you shape a practical
+                    contact solution.
+                </p>
+
+            </div>
+
+
+            <a
+                href="#contact"
+                class="btn btn-gold"
+            >
+
+                Start a Conversation
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     CONTACT
+====================================================== -->
+
+<section
+    id="contact"
+    class="section contact-section"
+>
+
+    <div class="container contact-grid">
+
+
+        <div class="contact-copy reveal">
+
+            <span class="kicker">
+                CONTACT US
+            </span>
+
+            <h2>
+                Let's talk about your customers.
+            </h2>
+
+            <p>
+                Tell SBA Contact Solutions what you need.
+                Replace the contact details below with
+                your official business information before
+                publishing.
+            </p>
+
+
+            <div class="contact-details">
+
+
+                <div>
+
+                    <span>
+                        ✉
+                    </span>
+
+                    <p>
+
+                        <b>
+                            Email
+                        </b>
+
+                        <small>
+                            <a href="mailto:sbasolutionscallcenter@gmail.com" aria-label="Email SBA Contact Solutions">
+                                sbasolutionscallcenter@gmail.com
+                            </a>
+                        </small>
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ☎
+                    </span>
+
+                    <p>
+
+                        <b>
+                            Phone
+                        </b>
+
+                        <small>
+                            <a href="https://wa.me/12393490695" target="_blank" rel="noopener" aria-label="Chat with SBA Contact Solutions on WhatsApp">
+                                +1 (239) 349-0695
+                            </a>
+                        </small>
+
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ⌖
+                    </span>
+
+                    <p>
+
+                        <b>
+                            Office
+                        </b>
+
+                        <small>
+                            Add your business location
+                        </small>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <form
+            class="contact-form reveal"
+            id="contactForm"
+        >
+
+
+            <div class="form-title">
+
+                <div>
+
+                    <span class="kicker">
+                        SEND AN ENQUIRY
+                    </span>
+
+                    <h3>
+                        How can we help?
+                    </h3>
+
+                </div>
+
+                <span class="secure">
+                    ● Secure enquiry
+                </span>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <label>
+
+                    Full name
+
+                    <input
+                        name="name"
+                        required
+                        autocomplete="name"
+                        placeholder="Your name"
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Business email
+
+                    <input
+                        type="email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        placeholder="you@company.com"
+                    >
+
+                </label>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <label>
+
+                    Phone
+
+                    <input
+                        name="phone"
+                        autocomplete="tel"
+                        placeholder="+1 (239) 349-0695"
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Service
+
+                    <select name="service">
+
+                        <option>
+                            Inbound call support
+                        </option>
+
+                        <option>
+                            Outbound support
+                        </option>
+
+                        <option>
+                            Live chat
+                        </option>
+
+                        <option>
+                            Email response
+                        </option>
+
+                        <option>
+                            Appointment setting
+                        </option>
+
+                        <option>
+                            Customer experience
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </label>
+
+            </div>
+
+
+            <label>
+
+                Message
+
+                <textarea
+                    name="message"
+                    required
+                    placeholder="Tell us about your customer service needs..."
+                ></textarea>
+
+            </label>
+
+
+            <button
+                class="btn btn-blue submit-btn"
+                type="submit"
+            >
+
+                Send Enquiry
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+            <p
+                class="form-message"
+                id="formMessage"
+                role="status"
+            ></p>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-brand">
+
+            <a
+                class="brand footer-brand-link"
+                href="#home"
+            >
+
+                <span class="brand-mark">
+                    S
+                </span>
+
+                <span class="brand-text">
+
+                    SBA
+
+                    <b>
+                        Contact Solutions
+                    </b>
+
+                </span>
+
+            </a>
+
+
+            <p>
+
+                Professional customer contact and
+                support solutions designed to help
+                businesses stay connected with
+                their customers.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Services
+            </h4>
+
+            <a href="#services">
+                Inbound Support
+            </a>
+
+            <a href="#services">
+                Outbound Support
+            </a>
+
+            <a href="#services">
+                Live Chat
+            </a>
+
+            <a href="#services">
+                Email Response
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Company
+            </h4>
+
+            <a href="#about">
+                About SBA
+            </a>
+
+            <a href="#process">
+                How It Works
+            </a>
+
+            <a href="#industries">
+                Industries
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Connect
+            </h4>
+
+            <a href="#contact">
+                Get a Consultation
+            </a>
+
+            <a href="#">
+                LinkedIn
+            </a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="container copyright">
+
+        <span>
+            © <span id="year"></span>
+            SBA Contact Solutions.
+            All rights reserved.
+        </span>
+
+        <span>
+            Customer service • Contact centre • Business support
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ======================================================
+     SERVICE MODAL
+====================================================== -->
+
+<div
+    class="modal"
+    id="serviceModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="modal-backdrop"
+        data-close-modal
+    ></div>
+
+
+    <div
+        class="modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+    >
+
+
+        <button
+            class="modal-close"
+            data-close-modal
+            aria-label="Close service details"
+        >
+            ×
+        </button>
+
+
+        <span
+            class="modal-icon"
+            id="modalIcon"
+        >
+            ☎
+        </span>
+
+
+        <span
+            class="kicker"
+            id="modalKicker"
+        >
+            SERVICE
+        </span>
+
+
+        <h2 id="modalTitle">
+            Service title
+        </h2>
+
+
+        <p id="modalDescription">
+        </p>
+
+
+        <div class="modal-columns">
+
+
+            <div>
+
+                <h4>
+                    What we can handle
+                </h4>
+
+                <ul id="modalList">
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Business benefit
+                </h4>
+
+                <p id="modalBenefit">
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <a
+            href="#contact"
+            class="btn btn-blue"
+            data-close-modal
+        >
+
+            Discuss this service
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ======================================================
+     BACK TO TOP
+====================================================== -->
+
+<button
+    class="back-top"
+    id="backTop"
+    aria-label="Back to top"
+>
+    ↑
+</button>
+
+
+
+<script>
+
+/* =========================================================
+   SERVICE INFORMATION
+========================================================= */
+
+const serviceData = {
+
+    inbound: {
+
+        icon: "☎",
+
+        title: "Inbound Call Support",
+
+        description:
+        "Professional handling of incoming customer calls so your customers receive clear, consistent and courteous assistance.",
+
+        items: [
+
+            "Customer enquiries and information requests",
+
+            "Message taking and call routing",
+
+            "Basic issue resolution and escalation",
+
+            "Call scripts and service procedures"
+
+        ],
+
+        benefit:
+        "A dependable first point of contact that helps your team stay focused while customers receive professional attention."
+
+    },
+
+
+    outbound: {
+
+        icon: "↗",
+
+        title: "Outbound Support",
+
+        description:
+        "Structured outbound communication for follow-ups, reminders, customer care campaigns and other business needs.",
+
+        items: [
+
+            "Customer follow-up calls",
+
+            "Appointment reminders and confirmations",
+
+            "Surveys and feedback calls",
+
+            "Campaign and notification support"
+
+        ],
+
+        benefit:
+        "A consistent outbound process helps your business stay connected with customers without placing every call on your internal team."
+
+    },
+
+
+    chat: {
+
+        icon: "◌",
+
+        title: "Live Chat",
+
+        description:
+        "Real-time website support that helps visitors get answers while they are actively considering your products or services.",
+
+        items: [
+
+            "Website visitor assistance",
+
+            "Product and service questions",
+
+            "Lead capture and routing",
+
+            "Escalation of complex enquiries"
+
+        ],
+
+        benefit:
+        "Customers get help at the moment they need it, creating a smoother digital experience and reducing unanswered questions."
+
+    },
+
+
+    email: {
+
+        icon: "✉",
+
+        title: "Email Response",
+
+        description:
+        "Organized customer email handling designed to keep enquiries moving and communication professional.",
+
+        items: [
+
+            "Inbox monitoring and triage",
+
+            "Customer replies and follow-ups",
+
+            "Request routing and escalation",
+
+            "Message templates and response standards"
+
+        ],
+
+        benefit:
+        "A clear email workflow helps prevent missed enquiries and keeps your customer communication consistent."
+
+    },
+
+
+    appointments: {
+
+        icon: "▣",
+
+        title: "Appointment Setting",
+
+        description:
+        "Make booking and confirming appointments easier for customers while reducing scheduling pressure on your internal staff.",
+
+        items: [
+
+            "Appointment booking",
+
+            "Confirmation and reminder calls",
+
+            "Rescheduling support",
+
+            "Calendar and request coordination"
+
+        ],
+
+        benefit:
+        "A structured appointment process reduces friction for customers and gives your team more time to focus on service delivery."
+
+    },
+
+
+    experience: {
+
+        icon: "★",
+
+        title: "Customer Experience",
+
+        description:
+        "A broader support approach focused on consistency, professionalism and the quality of every customer interaction.",
+
+        items: [
+
+            "Customer communication standards",
+
+            "Service scripts and workflows",
+
+            "Escalation procedures",
+
+            "Multi-channel support coordination"
+
+        ],
+
+        benefit:
+        "Your customers receive a more consistent experience while your business has a clearer framework for customer-facing operations."
+
+    }
+
+};
+
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+const header =
+    document.getElementById("siteHeader");
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const nav =
+    document.getElementById("mainNav");
+
+
+menuToggle.addEventListener(
+    "click",
+    () => {
+
+        const open =
+            nav.classList.toggle("open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            open
+        );
+
+    }
+);
+
+
+document
+.querySelectorAll("#mainNav a")
+.forEach(link => {
+
+    link.addEventListener(
+        "click",
+        () => {
+
+            nav.classList.remove("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+    );
+
+});
+
+
+
+/* =========================================================
+   HEADER SCROLL EFFECT
+========================================================= */
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        header.classList.toggle(
+            "scrolled",
+            window.scrollY > 10
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target
+                        .classList
+                        .add("visible");
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: .12
+        }
+    );
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(element => {
+
+    observer.observe(element);
+
+});
+
+
+
+/* =========================================================
+   SERVICE MODAL
+========================================================= */
+
+const modal =
+    document.getElementById(
+        "serviceModal"
+    );
+
+const modalIcon =
+    document.getElementById(
+        "modalIcon"
+    );
+
+const modalTitle =
+    document.getElementById(
+        "modalTitle"
+    );
+
+const modalDescription =
+    document.getElementById(
+        "modalDescription"
+    );
+
+const modalList =
+    document.getElementById(
+        "modalList"
+    );
+
+const modalBenefit =
+    document.getElementById(
+        "modalBenefit"
+    );
+
+
+function openService(key) {
+
+    const data =
+        serviceData[key];
+
+    if (!data) {
+        return;
+    }
+
+
+    modalIcon.textContent =
+        data.icon;
+
+
+    modalTitle.textContent =
+        data.title;
+
+
+    modalDescription.textContent =
+        data.description;
+
+
+    modalBenefit.textContent =
+        data.benefit;
+
+
+    modalList.innerHTML =
+        data.items
+        .map(
+            item =>
+                `<li>${item}</li>`
+        )
+        .join("");
+
+
+    modal.classList.add("open");
+
+    modal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body
+    .classList
+    .add("modal-open");
+
+
+    document
+    .querySelector(".modal-close")
+    .focus();
+
+}
+
+
+function closeService() {
+
+    modal.classList.remove(
+        "open"
+    );
+
+    modal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body
+    .classList
+    .remove("modal-open");
+
+}
+
+
+document
+.querySelectorAll(".service-card")
+.forEach(card => {
+
+    card.addEventListener(
+        "click",
+        () => {
+
+            openService(
+                card.dataset.service
+            );
+
+        }
+    );
+
+});
+
+
+document
+.querySelectorAll("[data-close-modal]")
+.forEach(element => {
+
+    element.addEventListener(
+        "click",
+        closeService
+    );
+
+});
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape" &&
+            modal.classList.contains("open")
+        ) {
+
+            closeService();
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+document
+.getElementById("contactForm")
+.addEventListener(
+    "submit",
+    event => {
+
+        event.preventDefault();
+
+
+        const form =
+            event.currentTarget;
+
+
+        const message =
+            document.getElementById(
+                "formMessage"
+            );
+
+
+        const name =
+            form.elements.name
+            .value
+            .trim();
+
+
+        message.textContent =
+            `Thanks ${name || "there"} — your enquiry has been captured in this demo. Connect the form to your email or CRM before publishing.`;
+
+
+        form.reset();
+
+    }
+);
+
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+const backTop =
+    document.getElementById(
+        "backTop"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        backTop.classList.toggle(
+            "show",
+            window.scrollY > 500
+        );
+
+    }
+);
+
+
+backTop.addEventListener(
+    "click",
+    () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+);
+
+
+
+/* =========================================================
+   CURRENT YEAR
+========================================================= */
+
+document.getElementById(
+    "year"
+).textContent =
+    new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>
